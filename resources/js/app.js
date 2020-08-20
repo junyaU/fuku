@@ -8,6 +8,7 @@ import router from "./router.js";
 import TabComponent from "./components/tabComponent.vue";
 import fileChoice from "./components/fileChoice.vue";
 import photoList from "./components/photosList.vue";
+import itemComponent from "./components/itemComponent.vue";
 import index from "./components/Toppage.vue";
 
 
@@ -29,6 +30,7 @@ window.Vue = require("vue");
 Vue.component("tab-component", TabComponent);
 Vue.component("file-choice" , fileChoice);
 Vue.component("photo-list" , photoList);
+Vue.component("item-component" , itemComponent);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
