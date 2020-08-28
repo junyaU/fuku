@@ -29,3 +29,7 @@ Route::post('/bottoms' , 'BottomsController@store');
 //シューズ
 Route::get('/shoes' , 'ShoesController@index');
 Route::post('/shoes' , 'ShoesController@store');
+
+//服の組み合わせ
+Route::get('/outfits' , 'OutfitsController@index');
+Route::post('/outfits' , 'OutfitsController@store');

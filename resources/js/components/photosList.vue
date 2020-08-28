@@ -1,8 +1,8 @@
 <template>
   <div class="tops-list">
     <div class="items-wrapper">
-      <div v-for="item in items" class="item-block">
-        <h3 class="item-name">{{item.name}}</h3>
+      <div v-for="item in items" :key="item.id" class="item-block">
+        <h3 class="photo-name">{{item.name}}</h3>
         <img :src="item.image" class="item-img" />
       </div>
     </div>
@@ -32,7 +32,7 @@ export default {
   background-color: #ddd;
 }
 
-.item-name {
+.photo-name {
   text-align: center;
 }
 

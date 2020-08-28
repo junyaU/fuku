@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{any}',function(){
-    return view('app');
-})->where('any','.*');
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/', function () {
+        return view('auth/login');
+    });
+});
+
+Auth::routes();
+
+Route::get('login/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('login/google/callback', 'Auth\LoginController@handleGoogleCallback');
+
+
+    Route::get('/{any}',function(){
+        return view('app');
+    })->where('any','.*');

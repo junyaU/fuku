@@ -2,23 +2,29 @@
   <div>
     <div>
       <div class="upper item-wrapper">
-        <h1 class="item-head">Tops</h1>
-        <p class="item-icon">
-          <i class="fas fa-tshirt"></i>
-        </p>
+        <router-link v-bind:to="{name:'addTops'}">
+          <h1 class="item-head">Tops</h1>
+          <p class="item-icon">
+            <i class="fas fa-tshirt"></i>
+          </p>
+        </router-link>
       </div>
       <div class="bottom row">
         <div class="col-sm-5 offset-sm-2 item-wrapper">
-          <h1 class="item-head">Bottoms</h1>
-          <p class="item-icon">
-            <i class="fas fa-columns"></i>
-          </p>
+          <router-link v-bind:to="{name:'addBottoms'}">
+            <h1 class="item-head">Bottoms</h1>
+            <p class="item-icon">
+              <i class="fas fa-columns"></i>
+            </p>
+          </router-link>
         </div>
         <div class="col-sm-5 item-wrapper">
-          <h1 class="item-head">Shoes</h1>
-          <p class="item-icon">
-            <i class="fas fa-shoe-prints"></i>
-          </p>
+          <router-link v-bind:to="{name:'addShoes'}">
+            <h1 class="item-head">Shoes</h1>
+            <p class="item-icon">
+              <i class="fas fa-shoe-prints"></i>
+            </p>
+          </router-link>
         </div>
       </div>
     </div>

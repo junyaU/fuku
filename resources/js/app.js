@@ -9,6 +9,11 @@ import TabComponent from "./components/tabComponent.vue";
 import fileChoice from "./components/fileChoice.vue";
 import photoList from "./components/photosList.vue";
 import itemComponent from "./components/itemComponent.vue";
+import registerButton from "./components/registerButton.vue";
+import fileComponent from "./components/fileComponent.vue";
+import photoPreview from "./components/photoPreview.vue";
+import itemChoice from "./components/itemChoice.vue";
+import textareaComponent from "./components/textareaComponent.vue";
 import index from "./components/Toppage.vue";
 
 
@@ -31,6 +36,11 @@ Vue.component("tab-component", TabComponent);
 Vue.component("file-choice" , fileChoice);
 Vue.component("photo-list" , photoList);
 Vue.component("item-component" , itemComponent);
+Vue.component("register-button" , registerButton);
+Vue.component("file-component" , fileComponent);
+Vue.component("photo-preview" , photoPreview);
+Vue.component("item-choice" , itemChoice);
+Vue.component("textarea-component" , textareaComponent)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

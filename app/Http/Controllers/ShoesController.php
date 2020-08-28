@@ -25,9 +25,9 @@ class ShoesController extends Controller
         $shoes->name = $request->name;
 
         $image = $request->file('image');
-        $path = Storage::disk("s3")->putfile('myshoes' , $image , 'public');
+        $path = Storage::disk(config("filesystems.cloud"))->putfile('myshoes' , $image , 'public');
 
-        $shoes->image = Storage::disk('s3')->url($path);
+        $shoes->image = Storage::disk(config("fylesystems.cloud"))->url($path);
         $shoes->save();
 
         return redirect('/add');

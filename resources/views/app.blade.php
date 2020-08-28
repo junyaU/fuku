@@ -13,8 +13,8 @@
 
 <body>
     <div id="app">
-        <tab-component></tab-component>
-        <router-view></router-view>
+      <tab-component></tab-component>
+      <router-view></router-view>
     </div>
     <script src="{{mix('/js/app.js')}}" defer></script>
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>

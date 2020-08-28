@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="topTitle">Fukuun</h1>
+    <h1 class="topTitle">Fuku</h1>
     <h2 class="subTitle">〜服の管理に〜</h2>
     <router-link v-bind:to="{name:'list'}">
       <h3 class="my-outfit">

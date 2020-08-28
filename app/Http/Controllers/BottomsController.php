@@ -24,9 +24,9 @@ class BottomsController extends Controller
         $bottoms->name = $request->name;
 
         $image = $request->file('image');
-        $path = Storage::disk("s3")->putfile('mybottoms' , $image , 'public');
+        $path = Storage::disk(config("filesystems.cloud"))->putfile('mybottoms' , $image , 'public');
 
-        $bottoms->image = Storage::disk('s3')->url($path);
+        $bottoms->image = Storage::disk(config("filesystems.cloud"))->url($path);
         $bottoms->save();
 
         return redirect('/add');

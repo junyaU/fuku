@@ -24,9 +24,9 @@ class TopsController extends Controller
         $tops->name = $request->name;
 
         $image = $request->file('image');
-        $path = Storage::disk('s3')->putfile('mytops' , $image , 'public');
+        $path = Storage::disk(config("filesystems.cloud"))->putfile('mytops' , $image , 'public');
 
-        $tops->image = Storage::disk('s3')->url($path);
+        $tops->image = Storage::disk(config("filesystems.cloud"))->url($path);
         $tops->save();
 
         return redirect('/add');
