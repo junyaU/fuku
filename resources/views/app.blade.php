@@ -1,3 +1,7 @@
+<?php
+$user = Auth::user();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -13,7 +17,7 @@
 
 <body>
     <div id="app">
-      <tab-component></tab-component>
+      <tab-component :user={{$user}}></tab-component>
       <router-view></router-view>
     </div>
     <script src="{{mix('/js/app.js')}}" defer></script>

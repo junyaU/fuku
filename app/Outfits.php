@@ -4,23 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-use App\Tops;
-
-use App\Bottoms;
-
-use App\Shoes;
-
 class Outfits extends Model
 {
     public function tops(){
-        return $this->hasone('Tops','id', 'tops_id');
+        return $this->hasone('App\Tops','id', 'tops_id');
     }
 
     public function bottoms(){
-        return $this->hasOne('Bottoms','id', 'bottoms_id');
+        return $this->hasOne('App\Bottoms','id', 'bottoms_id');
     }
 
     public function shoes(){
-        return $this->hasOne('shoes', 'id' ,'shoes_id');
+        return $this->hasOne('App\Shoes', 'id' ,'shoes_id');
     }
 }

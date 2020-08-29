@@ -5,11 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Outfits;
-
 class OutfitsController extends Controller
 {
     public function index(){
-        return Outfits::all();
+        $outfits = Outfits::all();
+        $item_list = [];
+        foreach($outfits as $value){
+            $tops = $value->tops;
+            $bottoms = $value->bottoms;
+            $shoes = $value->shoes;
+
+            array_push($item_list, array('item_name'=>$value['item_name'] , 'tops'=>$tops , 'bottoms'=>$bottoms , 'shoes'=>$shoes));
+        }
+
+        return $item_list;
     }
 
     public function store(Request $request){

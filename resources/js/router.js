@@ -8,6 +8,7 @@ import Make from "./components/make.vue";
 import AddTops from "./components/addTops.vue";
 import AddBottoms from "./components/addBottoms.vue";
 import AddShoes from "./components/addShoes.vue";
+import OutfitDetail from "./components/outfitDetail.vue";
 
 Vue.use(VueRouter);
 
@@ -18,12 +19,13 @@ const routes = [
     { path: "/make", name: "make", component: Make },
     { path: "/addTops", name: "addTops", component: AddTops },
     { path: "/addBottoms", name: "addBottoms", component: AddBottoms },
-    { path: "/addShoes", name: "addShoes", component: AddShoes }
+    { path: "/addShoes", name: "addShoes", component: AddShoes },
+    { path: "/outfitDetail", name: "outfitDetail" , component: OutfitDetail , props:true}
 ];
 
 const router = new VueRouter({
     mode: "history",
-    routes
+    routes,
 });
 
 export default router;
