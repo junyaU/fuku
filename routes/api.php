@@ -18,18 +18,21 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//トップス
-Route::get('/tops' , 'TopsController@index');
-Route::post('/tops' , 'TopsController@store');
+Route::group(['middleware' => 'cookieCheck'], function () {
+    //トップス
+    Route::get('/tops' , 'TopsController@index');
+    Route::post('/tops' , 'TopsController@store');
 
-//ボトムス
-Route::get('/bottoms' , 'BottomsController@index');
-Route::post('/bottoms' , 'BottomsController@store');
+    //ボトムス
+    Route::get('/bottoms' , 'BottomsController@index');
+    Route::post('/bottoms' , 'BottomsController@store');
 
-//シューズ
-Route::get('/shoes' , 'ShoesController@index');
-Route::post('/shoes' , 'ShoesController@store');
+    //シューズ
+    Route::get('/shoes' , 'ShoesController@index');
+    Route::post('/shoes' , 'ShoesController@store');
 
-//服の組み合わせ
-Route::get('/outfits' , 'OutfitsController@index');
-Route::post('/outfits' , 'OutfitsController@store');
+    //服の組み合わせ
+    Route::get('/outfits' , 'OutfitsController@index');
+    Route::post('/outfits' , 'OutfitsController@store');
+
+});

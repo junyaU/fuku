@@ -13,11 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['middleware' => 'guest'], function () {
     Route::get('/', function () {
         return view('auth/login');
-    });
-});
+    })->middleware('guest');
+
 
 Auth::routes();
 
@@ -27,4 +26,4 @@ Route::get('login/google/callback', 'Auth\LoginController@handleGoogleCallback')
 
     Route::get('/{any}',function(){
         return view('app');
-    })->where('any','.*');
+    })->where('any','.*')->middleware('cookieCheck');

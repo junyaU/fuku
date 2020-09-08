@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\User;
+use Illuminate\Support\Facades\Cookie;
 use Socialite;
+
 
 class LoginController extends Controller
 {
@@ -54,8 +56,17 @@ class LoginController extends Controller
         if ($user == null) {
             $user = $this->createUserByGoogle($gUser);
         }
+        $value = 'junya';
+        Cookie::queue(Cookie::make('hello', $value , 1));
+
         // ログイン処理
         \Auth::login($user, true);
+
+
+
+
+
+
         return redirect('/');
     }
 
