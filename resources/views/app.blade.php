@@ -18,11 +18,12 @@ $user = Auth::user();
 <body>
     <div id="app">
       <tab-component :user={{$user}}></tab-component>
-      <router-view></router-view>
-      <form action="/logout" method="POST">
-        @csrf
-        <input type="submit" value="ログアウト" />
-      </form>
+      <side-bar></side-bar>
+      <div class="row">
+        <div class="offset-3 col-sm-7 offset-3">
+          <router-view></router-view>
+        </div>
+      </div>
     </div>
     <script src="{{mix('/js/app.js')}}" defer></script>
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>

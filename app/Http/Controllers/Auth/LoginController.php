@@ -57,7 +57,7 @@ class LoginController extends Controller
             $user = $this->createUserByGoogle($gUser);
         }
         $value = 'junya';
-        Cookie::queue(Cookie::make('hello', $value , 1));
+        Cookie::queue(Cookie::make('hello', $value , 60));
 
         // ログイン処理
         \Auth::login($user, true);

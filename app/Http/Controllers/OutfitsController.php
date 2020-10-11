@@ -17,7 +17,6 @@ class OutfitsController extends Controller
 
             array_push($item_list, array('item_name'=>$value['item_name'] , 'tops'=>$tops , 'bottoms'=>$bottoms , 'shoes'=>$shoes));
         }
-
         return $item_list;
     }
 

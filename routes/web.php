@@ -26,4 +26,4 @@ Route::get('login/google/callback', 'Auth\LoginController@handleGoogleCallback')
 
     Route::get('/{any}',function(){
         return view('app');
-    })->where('any','.*')->middleware('cookieCheck');
+})->where('any','.*')->middleware('cookieCheck');

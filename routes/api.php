@@ -31,8 +31,11 @@ Route::group(['middleware' => 'cookieCheck'], function () {
     Route::get('/shoes' , 'ShoesController@index');
     Route::post('/shoes' , 'ShoesController@store');
 
-    //服の組み合わせ
+    //自分の服の組み合わせ
     Route::get('/outfits' , 'OutfitsController@index');
     Route::post('/outfits' , 'OutfitsController@store');
 
+    //コーディネート
+    Route::get('/coordination' , 'Total_photosController@index');
+    Route::post('/coordination' , 'Total_photosController@store');
 });

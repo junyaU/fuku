@@ -14,6 +14,7 @@ import fileComponent from "./components/fileComponent.vue";
 import photoPreview from "./components/photoPreview.vue";
 import itemChoice from "./components/itemChoice.vue";
 import textareaComponent from "./components/textareaComponent.vue";
+import sideBar from "./components/sideBar.vue";
 import index from "./components/Toppage.vue";
 
 
@@ -40,7 +41,8 @@ Vue.component("register-button" , registerButton);
 Vue.component("file-component" , fileComponent);
 Vue.component("photo-preview" , photoPreview);
 Vue.component("item-choice" , itemChoice);
-Vue.component("textarea-component" , textareaComponent)
+Vue.component("textarea-component" , textareaComponent);
+Vue.component('side-bar' , sideBar);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
